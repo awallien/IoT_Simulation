@@ -126,7 +126,7 @@ if __name__ == '__main__':
     toggle_t.start()
 
     while True:
-        time.sleep(5)
+        time.sleep(1)
         device = LoRaDevice(PHYPayload(MACPayload(FHDRPayload(dev_addr,toggle.get()))))
         info = "".join(map(str,device.info()))
         print("[%s]: sending info to gateway: %s" % (dev_addr,info))
